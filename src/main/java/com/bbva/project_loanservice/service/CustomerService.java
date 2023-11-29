@@ -46,7 +46,6 @@ public class CustomerService {
             existingCustomer.setBusinessName(updatedCustomerDTO.getBusinessName());
             existingCustomer.setCustomerType(updatedCustomerDTO.getCustomerType());
             existingCustomer.setSalary(updatedCustomerDTO.getSalary());
-            // Agrega otros campos según sea necesario
 
             customerRepository.save(existingCustomer);
         });

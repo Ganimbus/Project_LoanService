@@ -20,7 +20,6 @@ public class CustomerController {
 
     @GetMapping("/all")
     public ResponseEntity<List<CustomerDTO>> getAllCustomers() {
-        // Lógica para obtener todos los clientes
         List<CustomerDTO> allCustomers = customerService.getAllCustomers();
         return new ResponseEntity<>(allCustomers, HttpStatus.OK);
     }
