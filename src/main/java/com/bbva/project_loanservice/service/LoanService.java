@@ -33,8 +33,12 @@ public class LoanService {
                 Loan loan = new Loan();
                 loan.setCustomer(application.getCustomer());
                 loan.setApplication(application);
+                loan.setInstalment(loanDTO.getInstalment());
                 loan.setAmount(application.getAmount());
-                // Configurar otros campos según sea necesario
+                loan.setInterestRate(loanDTO.getInterestRate());
+                loan.setInterestType(loanDTO.getInterestType());
+                loan.setFrequency(loanDTO.getFrequency());
+                loan.setStartDate(loanDTO.getStartDate());
 
                 // Guardar el préstamo en la base de datos
                 loanRepository.save(loan);
