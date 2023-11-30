@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BlacklistRepository extends JpaRepository<BlackList, String> {
-
+     boolean existsByDni(String dni);
 }
